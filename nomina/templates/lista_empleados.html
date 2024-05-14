@@ -1,0 +1,26 @@
+{% extends "layouts/base2.html" %}
+
+{% block content %}
+<h1>Lista Empleados</h1>
+
+<ul>
+    {% for empleado in empleados %}
+    <li>
+        <h1>{{empleado.username}}</h1>
+       <a href={% url 'detalle_empleado' empleado.id %}>
+        <button>
+            Update
+        </button>
+       </a>
+       <form action="{% url 'despedir' empleado.id %}" method='POST'>
+        {% csrf_token %}
+        <button>
+            Fired
+        </button>
+    </form>
+    </li>
+    {% endfor %}
+
+</ul>
+
+{% endblock content %}

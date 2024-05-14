@@ -1,0 +1,6 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "After Dark",
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "editor.wordWrap": "on"
+}

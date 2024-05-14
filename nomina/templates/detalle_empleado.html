@@ -1,0 +1,15 @@
+{% extends 'layouts/base2.html' %}
+
+{% block content %}
+{% csrf_token %}
+<h1>{{empleado.username}}</h1>
+{{error}}
+
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button>
+        Update
+    </button>
+</form>
+{% endblock %}
